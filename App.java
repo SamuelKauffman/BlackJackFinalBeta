@@ -24,8 +24,8 @@ public class App {
 		System.out.println(deck.getTopCard(2));
 		System.out.println(deck.getTopCard(3));
 		//testing hand class
-		//hand.setHandCard(1);
-		//System.out.println(hand.getHandCard());
+		hand.setHandCard(1);
+		System.out.println(hand.getHandCard());
 	}
 
 }

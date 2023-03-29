@@ -10,7 +10,7 @@ public class BlackJack extends Hand {
 		money = 100;
 	}
 
-	public BlackJack(String[] suit, String[] rank, String[] deck, int[] Value, String handCard, int handValue, int dealerHandValue,
+	public BlackJack(String[] suit, String[] rank, String[] deck, int[] value, String handCard, int handValue, int dealerHandValue,
 			String dealerHandCard, int bet, int money, String topCard) {
 		super(suit, rank, deck, value, handCard, handValue, dealerHandValue, dealerHandCard, topCard);
 		this.bet = bet;

@@ -9,6 +9,7 @@ public class Hand extends Deck {
 		super();
 		handValue = 0;
 		dealerHandValue = 0;
+		handCard = new String[5];
 		dealerHandCard = "";
 
 	}
@@ -23,7 +24,7 @@ public class Hand extends Deck {
 	}
 
 	public String getHandCard() { //do all these getters and setters after topCard method
-		return this.handCard.toString();
+		return this.handCard[0];
 	}
 
 	public void setHandCard(int hit) {
@@ -40,8 +41,9 @@ public class Hand extends Deck {
 		return handValue;
 	}
 
-	public void setHandValue(int handValue) {
-		this.handValue = handValue;
+	public void setHandValue(int hit) {
+		int handValue = deck.getTopCard(hit);
+		this.handValue = hit;
 	}
 
 	public int getDealerHand() {
