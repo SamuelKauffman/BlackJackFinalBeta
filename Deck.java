@@ -3,8 +3,8 @@ import java.util.Random;
 public class Deck {
 	private String[] mSuit;
 	private String[] mRank;
-	private String[] mDeck;
-	private int[] mValue;
+	protected String[] mDeck;
+	protected int[] mValue;
 	private String mTopCard;
 
 	public Deck() {
@@ -71,7 +71,10 @@ public class Deck {
 	}
 
 	public String getTopCard(int hit) {
-		mTopCard = mDeck[hit - 1];
+		if(hit >= mDeck.length) {
+			shuffleCards();
+		}
+		mTopCard = mDeck[hit];
 		return mTopCard;
 	}
 

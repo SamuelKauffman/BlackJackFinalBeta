@@ -47,7 +47,7 @@ public class BlackJack extends Hand {
 		this.money = money;
 	}
 
-	public void WinLose() { //finish this after topCard method, getters and setters in hand
+	public void WinLose() { //Make this take in 2 getValue mthods, compare the 2 values and whoever is greater but under 21, wins
 		if (handValue > 21 && dealerHandValue) {
 			
 		}
