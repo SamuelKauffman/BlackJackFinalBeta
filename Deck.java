@@ -79,14 +79,17 @@ public class Deck {
 	}
 
 	public void setValue() {
-		int[] value = new int[52];
-		for (int i = 0; i < mRank.length; i++) {
-			for (int n = 0; n < mSuit.length; n++) {
-				value[mSuit.length * i + n] = i + 1;
-				mValue = value;
-
-			}
-		}
+	    int[] value = new int[52];
+	    for (int i = 0; i < mRank.length; i++) {
+	        for (int n = 0; n < mSuit.length; n++) {
+	            int cardValue = i + 1;
+	            if (cardValue > 10) {
+	                cardValue = 10;
+	            }
+	            value[mSuit.length * i + n] = cardValue;
+	            mValue = value;
+	        }
+	    }
 	}
 
 	public void valueOrder() {
