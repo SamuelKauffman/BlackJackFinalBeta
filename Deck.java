@@ -51,8 +51,8 @@ public class Deck {
 	}
 
 	public void shuffleCards() {
+		Random shuffle = new Random();
 		for (int i = 0; i < mDeck.length; i++) {
-			Random shuffle = new Random();
 			int newIndex = shuffle.nextInt(mDeck.length);
 			String randomCard = mDeck[newIndex];
 			int randomValue = mValue[newIndex];
@@ -71,7 +71,7 @@ public class Deck {
 	}
 
 	public String getTopCard(int hit) {
-		if(hit >= mDeck.length) {
+		if (hit >= mDeck.length) {
 			shuffleCards();
 		}
 		mTopCard = mDeck[hit];
@@ -79,17 +79,17 @@ public class Deck {
 	}
 
 	public void setValue() {
-	    int[] value = new int[52];
-	    for (int i = 0; i < mRank.length; i++) {
-	        for (int n = 0; n < mSuit.length; n++) {
-	            int cardValue = i + 1;
-	            if (cardValue > 10) {
-	                cardValue = 10;
-	            }
-	            value[mSuit.length * i + n] = cardValue;
-	            mValue = value;
-	        }
-	    }
+		int[] value = new int[52];
+		for (int i = 0; i < mRank.length; i++) {
+			for (int n = 0; n < mSuit.length; n++) {
+				int cardValue = i + 1;
+				if (cardValue > 10) {
+					cardValue = 10;
+				}
+				value[mSuit.length * i + n] = cardValue;
+				mValue = value;
+			}
+		}
 	}
 
 	public void valueOrder() {
